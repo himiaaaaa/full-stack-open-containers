@@ -20,7 +20,6 @@ router.post('/', async (req, res) => {
   if(!todoNumber){
     await redis.setAsync('added_todos', 1)
   } else {
-    
     await redis.setAsync('added_todos', Number(todoNumber) + 1)
   }
   
