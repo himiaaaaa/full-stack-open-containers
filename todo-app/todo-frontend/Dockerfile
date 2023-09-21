@@ -15,3 +15,6 @@ RUN npm install -g serve
 
 CMD ["serve", "build"]
 
+RUN CI=true npm test
+
+
