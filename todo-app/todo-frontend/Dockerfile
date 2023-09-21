@@ -9,7 +9,7 @@ RUN npm ci
 
 RUN npm run build
 
-ENV REACT_APP_BACKEND_URL='//localhost:3000'
+ENV REACT_APP_BACKEND_URL='//localhost:3009'
 
 RUN npm install -g serve
 
