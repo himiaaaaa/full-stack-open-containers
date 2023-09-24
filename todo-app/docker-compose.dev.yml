@@ -6,8 +6,6 @@ services:
       dockerfile: ./todo-frontend/dev.Dockerfile # This will simply tell which dockerfile to read
     volumes:
       - ./todo-frontend:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
-    ports:
-      - 3000:3000
     container_name: todos-frontend-dev # This will name the container todo-dev
     environment:
       - REACT_APP_BACKEND_URL=http://localhost:8080/api
@@ -39,8 +37,6 @@ services:
       dockerfile: ./todo-backend/dev.Dockerfile # This will simply tell which dockerfile to read
     volumes:
       - ./todo-backend:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
-    ports:
-      - 3001:3000
     container_name: todos-backend-dev # This will name the container todo-dev
     environment: 
       - REDIS_URL=redis://redis:6379
